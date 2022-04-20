@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/principalFragment">
+
+    <fragment
+        android:id="@+id/principalFragment"
+        android:name="com.example.taskorganizer.fragment.PrincipalFragment"
+        android:label="fragment_principal"
+        tools:layout="@layout/fragment_principal">
+        <action
+            android:id="@+id/action_principalFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+        <action
+            android:id="@+id/action_principalFragment_to_detalheFragment"
+            app:destination="@id/detalheFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.example.taskorganizer.fragment.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" />
+    <fragment
+        android:id="@+id/detalheFragment"
+        android:name="com.example.taskorganizer.fragment.DetalheFragment"
+        android:label="fragment_detalhe"
+        tools:layout="@layout/fragment_detalhe" >
+        <action
+            android:id="@+id/action_detalheFragment_to_subtarefaFragment"
+            app:destination="@id/subtarefaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subtarefaFragment"
+        android:name="com.example.taskorganizer.fragment.SubtarefaFragment"
+        android:label="fragment_subtarefa"
+        tools:layout="@layout/fragment_subtarefa" />
+</navigation>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PrincipalFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="115dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/black"
+            android:text="Titulo da Tarefa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/black"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="162dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/black"
+            android:text="Descrição da Tarefa"
+            android:inputType="textCapSentences"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="359dp"
+            android:layout_height="91dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/black"
+            android:inputType="textMultiLine|textCapSentences"
+            android:lines="10"
+            android:scrollbars="vertical"
+            android:gravity="top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="162dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/black"
+            android:text="Data Prevista"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.104"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/bt_data"
+            android:layout_width="361dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="8dp"
+            android:text="Buscar Data"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/bt_salvar"
+            android:layout_width="361dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="304dp"
+            android:text="Salvar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bt_data"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
