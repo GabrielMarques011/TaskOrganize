@@ -1,11 +1,18 @@
 package com.example.taskorganizer.model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
 import lombok.Data;
 
 @Data
+@Entity
 public class Tarefa {
 
+    @PrimaryKey(autoGenerate = true)
     private Long idTarefa;
+    /*@ColumnInfo()*/
     private String titulo;
     private String descricao;
 
