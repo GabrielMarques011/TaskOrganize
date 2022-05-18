@@ -20,4 +20,8 @@
         </activity>
     </application>
 
+    <!-- AQUI ESTAMOS PERGUNTANDO SE É POSSIVEL HABILITAR A CAMERA (NÃO PEDE A PERMISSSÃO EM TEMPO DE EXECUSSÃO)-->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
 </manifest>

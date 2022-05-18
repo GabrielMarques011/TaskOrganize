@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Task Organizer</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="salvar">Botão Salvar</string>
+    <string name="origem_img">Qual a origem da imagem?</string>
+    <string name="camera">Câmera</string>
+    <string name="galeria">Galeria</string>
 </resources>

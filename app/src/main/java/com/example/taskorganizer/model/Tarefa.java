@@ -4,13 +4,14 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
 import lombok.Data;
 
 @Data
 @Entity
-public class Tarefa {
+public class Tarefa implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private Long idTarefa;

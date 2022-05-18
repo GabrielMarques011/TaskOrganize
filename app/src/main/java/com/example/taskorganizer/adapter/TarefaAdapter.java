@@ -1,6 +1,7 @@
 package com.example.taskorganizer.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +26,12 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
     //variavel para o Context
     private Context context;
 
+    //variavel para o Listener
+    private onTarefaClickListener listenerTarefa;
+
     //construtor que recebe os parametros para o Adapter
-    public TarefaAdapter(List<Tarefa> lista, Context cont){
+    public TarefaAdapter(List<Tarefa> lista, Context cont, onTarefaClickListener listenerTarefa){
+        this.listenerTarefa = listenerTarefa;
         this.tarefas = lista;
         this.context = cont;
     }
@@ -69,6 +74,15 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
             holder.tvStatus.setBackgroundColor(context.getResources().getColor(R.color.amarelo));
         }
 
+        //implementando o click na tarefa
+        holder.itemView.setOnClickListener(v -> {
+
+            //quando eu clico no holder(tarefa), ele dispara para o listener
+            listenerTarefa.onClick(v,t);
+            //Log.w("Click", "CLICOU NA POSIÇÃO "+position);
+
+        });
+
     }
 
     @Override
@@ -90,11 +104,18 @@ public class TarefaAdapter extends RecyclerView.Adapter<TarefaAdapter.TarefaView
             super(view);
 
             //passar da view para os componentes
-            tvTitulo = view.findViewById(R.id.titulo);
-            tvData = view.findViewById(R.id.data);
-            tvStatus = view.findViewById(R.id.status);
+            tvTitulo = view.findViewById(R.id.tvTitulo);
+            tvData = view.findViewById(R.id.tvData);
+            tvStatus = view.findViewById(R.id.tvStatus);
 
         }
+
+    }
+
+    //interface para o click na tarefa
+    public interface onTarefaClickListener{
+
+        void onClick(View view, Tarefa tarefa);
 
     }
 

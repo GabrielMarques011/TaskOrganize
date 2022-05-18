@@ -1,45 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/teal_700"
-    android:layout_margin="5sp">
+    android:layout_height="wrap_content"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        card_view:cardCornerRadius="15dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/img_tarefa"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toStartOf="@+id/tvTitulo"
+                card_view:layout_constraintHorizontal_bias="0.179"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:padding="1dp"
+                android:text="Titulo Da Tarefa"
+                android:textColor="@color/black"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="55dp" />
 
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="112dp"
+                android:padding="1dp"
+                android:text="Em aberto"
+                android:textColor="@color/black"
+                android:textSize="30px"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.666" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="391dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp">
-
-        <TextView
-            android:id="@+id/titulo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estudar Android"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10/02/2021"
-            android:textSize="15dp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="27dp" />
-
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="389dp"
-            android:layout_height="17dp"
-            android:background="#0AE805"
-            android:text="Finalizada"
-            android:textAlignment="center"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="47dp" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
-
-
+            <TextView
+                android:id="@+id/tvData"
+                android:layout_width="60dp"
+                android:layout_height="15dp"
+                android:padding="1dp"
+                android:text="Data"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="30px"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.518"
+                card_view:layout_constraintStart_toEndOf="@+id/tvStatus"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:layout_constraintVertical_bias="0.514"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
